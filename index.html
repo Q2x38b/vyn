@@ -1,1 +1,41 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotlight Search</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <main class="app-shell">
+      <section class="spotlight">
+        <header class="spotlight__header">
+          <h1>Spotlight</h1>
+          <p>Ask for anything &mdash; weather, timers, and more.</p>
+        </header>
+        <div class="spotlight__input-row">
+          <input
+            id="spotlight-input"
+            class="spotlight__input"
+            type="text"
+            placeholder="Try “What’s the weather in Lisbon tomorrow?”"
+            autocomplete="off"
+          />
+          <button id="spotlight-submit" class="spotlight__submit" type="button" aria-label="Execute query">
+            ↵
+          </button>
+        </div>
+        <section id="result-panel" class="result-panel hidden" aria-live="polite"></section>
+      </section>
+      <aside class="context">
+        <header class="context__header">
+          <h2>Available Tools</h2>
+          <p>Spotlight discovers tools dynamically. Add new JS modules to grow capabilities.</p>
+        </header>
+        <div id="tools-context" class="context__body"></div>
+      </aside>
+    </main>
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>
